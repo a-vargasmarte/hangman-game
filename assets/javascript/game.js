@@ -1,27 +1,17 @@
 //global scope
 
-//general rules
 /*Rules:
-* the goal is to guess a random word pulled from an array of words 
+1 the goal is to guess a random word pulled from an array of words 
 (aka a word bank) with a limited number of attempts.
 	* 10 guesses for easy
 	* 8 guesses for medium
 	* 6 guesses for hard
-* As you guess letters of each word, they appear in their written order.
-* If you run out of attempts, you lose and a new word is picked.
-* If you guess before running out of attempts then you win, your score goes up by one, and you get a new word.*/
-
-//Press any key to begin! This is how the game starts
-
-/*document.onkeyup = function(event) {
+2 As you guess letters of each word, they appear in their written order.
+3 If you run out of attempts, you lose and a new word is picked.
+4 If you guess before running out of attempts then you win, your score goes up by one, and you get a new word.*/
 	
-	//the user presses any key
-	
-	let anyKey = event.key;*/
+	//let's pretend these variables just exist
 
-	//And the game starts, prompting content to appear
-
-	//variables are declared
 	let wins = 0;
 	let guesses = 10; //start with easy difficulty but this will change later
 	let wordBank = ['grenadine','pomegranate','hefty','gladiolus','pelter',
@@ -42,9 +32,30 @@
 			 'vulnerable','prod','famine','eradicate'];
 
 
-	//prompting a new random word from the wordBank array
+	//I need to pick a random word from the wordBank 
 	let randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-	console.log(randomWord);
+	function pick(randomWord) {		
+		//a random word from wordBank is stored in randomWord 
+		
+		const hide = () => {
+			for (i=0; i < randomWord.length; i++) {
+				console.log('_ ');
+				/*return randomWord[i]+=randomWord[i+1];*/
+			};
+		};	
+			/*console.log(randomWord[i]+=randomWord[i+1]);*/
+	};
+
+	
+
+	//for each character of the chosen randomWord, I want to replace its value
+	//with a "_ " so that the user knows how many letters the word he/she 
+	//has to guess has. for `Alberto` it will look `_ _ _ _ _ _ _`.
+
+
+	
+	
+	
 
 
 
@@ -52,19 +63,8 @@
 	//this randomWord is placed in a new div, which is appended in its parent
 	//div
 
-	/*let firstDiv = $("<div>");
-	firstDiv.text("this is the first random word: " + randomWord);
-	
 
-	$("#global-div").append(firstDiv);*/
-
-	//so far the word shows, but for the game, the word should show as `_ _ _`
-
-		for (i=0; i<randomWord.length;i++) {
-			randomWord[i] = "_ ";
-		};
-	
-
+	//so far the word shows, but for the game, the word should show as `_ _ _`	
 			
 
 	//for this I would need to extract each character of the chosen random
@@ -78,18 +78,6 @@
 
 	//the user now has to guess his/hers first letter
 
-	/*document.onkeyup = function(event) {
-
-		//the user makes his/hers  first guess
-		let userGuess = event.key;
-
-		//if the pressed key matches any character of the randomWord
-		//then it appears on a div
-
-		//else, this letter gets attached below 'guessed letters'
-
-
-	};*/
 
 //};
 
