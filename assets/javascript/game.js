@@ -38,10 +38,8 @@
 		//a random word from wordBank is stored in randomWord 
 		
 		const hide = () => {
-			for (i=0; i < randomWord.length; i++) {
-				console.log('_ ');
-				/*return randomWord[i]+=randomWord[i+1];*/
-			};
+			
+			
 		};	
 			/*console.log(randomWord[i]+=randomWord[i+1]);*/
 	};
