@@ -16,13 +16,28 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<div id="global-div"></div>
-		<h1 class="text-center">Hello World</h1>
-		<h2>Press any key to get started!</h2>
-		<h2>Wins</h2>
-		<h2>Number of guesses remaining</h2>
-		<h2>Letters already guessed</h2>
+		<div id="game-container">
+			<h1 class="text-center">HANGMAN!</h1>
+			<h2>Press any key to get started!</h2>
+			<div id="wordDiv">
+				<!-- the random chosen word lives here -->
+			</div>
+			<div id="wins" class="score">
+				<!-- the wins score lives here -->
+			</div>
+			<div id = "losses" class="score">
+				<!-- the losses score lives here -->
+			</div>
 
+			<div id = "guessRemain">
+				<!-- the number of remaining guesses lives here -->
+			</div>
+
+			<div id="lettersGuessed">
+				<!-- my letters guessed live here! -->
+			</div>
+		</div>
+		
 		<!-- game.js -->
 		<script src="assets/javascript/game.js"></script>
 	</body>
